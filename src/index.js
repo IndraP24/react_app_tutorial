@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+
+/* This component renders a single button as a Square */
 class Square extends React.Component {
     render() {
       return (
@@ -12,9 +14,10 @@ class Square extends React.Component {
     }
   }
 
+/* This component renders all the 9 Squares in the game */
 class Board extends React.Component {
     renderSquare(i) {
-        return <Square />
+        return <Square value={i} />;
     }
 
     render() {
@@ -43,7 +46,7 @@ class Board extends React.Component {
     }
 }
 
-
+/* This component renders the created Board with placeholder values for the game play */
 class Game extends React.Component {
     render() {
       return (
