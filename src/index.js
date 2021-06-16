@@ -14,18 +14,6 @@ function Square(props) {
 
 /* This component renders all the 9 Squares in the game */
 class Board extends React.Component {
-    handleClick(i) {
-        const squares = this.state.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-          return;
-        }
-        squares[i] = this.state.xIsNext ? 'X' : 'O';
-        this.setState({
-          squares: squares,
-          xIsNext: !this.state.xIsNext,
-        });
-    }
-
     renderSquare(i) {
         return (
           <Square 
